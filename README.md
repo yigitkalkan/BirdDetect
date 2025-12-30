@@ -64,7 +64,7 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 
 [Uygulama Demo Videosu ](https://drive.google.com/file/d/1L-KYh08mN-cVR2RWgAfrJaOK41goTuE-/view?usp=sharing)
 
-###  Depoyu Klonlayın
+### 📦 Depoyu Klonlayın
 ```bash
 git clone https://github.com/yigitkalkan/BirdDetect.git
 cd BirdDetect-AI 
@@ -96,6 +96,7 @@ Local URL: http://localhost:8501
    - Tahmin edilen kuş türü
    - Güven oranı (%)
    - En olası ilk 3 tahmin
+
 
 
 
