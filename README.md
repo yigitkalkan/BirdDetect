@@ -80,9 +80,9 @@ pip install -r requirements.txt
 streamlit run mainbird.py
 ```
 Terminalde aşağıdaki gibi bir çıktı alırsınız:
-
+```bash
 Local URL: http://localhost:8501
-
+```
 ## 💻 Kullanım Rehberi
 
 1. **🖼️ Görüntü Yükleme**  
@@ -96,6 +96,7 @@ Local URL: http://localhost:8501
    - Tahmin edilen kuş türü
    - Güven oranı (%)
    - En olası ilk 3 tahmin
+
 
 
 
