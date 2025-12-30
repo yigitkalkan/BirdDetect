@@ -62,5 +62,5 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 
 ### 1. Depoyu Klonlayın
 ```bash
-git clone [https://github.com/kullaniciadin/AviDetect-AI.git](https://github.com/kullaniciadin/AviDetect-AI.git)
+git clone [https://github.com/yigitkalkan/SektorKampusteProje.git](https://github.com/kullaniciadin/SektorKampusteProje.git)  
 cd AviDetect-AI
