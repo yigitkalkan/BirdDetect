@@ -1,90 +1,66 @@
-# 🐦 Bird Species Classification with Vision Transformer
+# 🐦 AviDetect AI - Yapay Zeka Destekli Kuş Türü Tanıma
 
-Bu proje, Kaggle’daki **220 sınıflı kuş türü veri seti** kullanılarak **Vision Transformer (ViT)** ile görüntü sınıflandırma problemi çözmek için hazırlanmış bir ödev/projedir.Model eğitimi **Hugging Face Transformers + PyTorch** ile yapılmış, ayrıca **Streamlit** ile basit bir tahmin arayüzü geliştirilmiştir.
+![Project Status](https://img.shields.io/badge/Status-Completed-success)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Framework](https://img.shields.io/badge/Framework-PyTorch%20%26%20HuggingFace-orange)
+![Interface](https://img.shields.io/badge/Interface-Streamlit-red)
 
-- Veri seti: https://www.kaggle.com/datasets/kedarsai/bird-species-classification-220-categories?resource=download
-- Kullanılan model: `google/vit-base-patch16-224`
-- Eğitim çıktıları: `egitim_sonuclari.png`
-
----
-
-## 📁 Klasör Yapısı
-
-Aşağıdaki yapı, proje klasörünüzle uyumludur:
-
-bird/
-├─ archive/ # Kaggle veri seti (imagefolder formatında)
-├─ bird_model/ # Eğitilmiş model + processor çıktıları (Trainer save_model)
-├─ mybird/ # (Opsiyonel) Python venv klasörü
-├─ birdd.py # Model eğitimi (ViT + Trainer)
-├─ mainbird.py # Streamlit tahmin uygulaması
-├─ egitim_sonuclari.png # Eğitim süreci grafikleri (loss/accuracy)
-├─ requirements.txt # Bağımlılıklar
-└─ README.md # Bu dosya
-
-yaml
-Kodu kopyala
-
-> Not: `archive/` klasörü içeriği, `datasets` kütüphanesinin `imagefolder` yapısına uygun olmalıdır (sınıf klasörleri altında görseller).
+**AviDetect AI**, son teknoloji **Vision Transformer (ViT)** mimarisini kullanarak doğadaki kuş türlerini fotoğraflarından yüksek doğrulukla tespit eden derin öğrenme tabanlı bir görüntü sınıflandırma projesidir.
 
 ---
 
-## ✅ Kullanılan Teknolojiler
+## 🎯 Proje Hakkında
 
-- Python
-- PyTorch (CUDA destekli)
-- Hugging Face Transformers (`ViTForImageClassification`, `ViTImageProcessor`)
-- Hugging Face Datasets (`load_dataset("imagefolder")`)
-- Scikit-learn (accuracy)
-- Matplotlib (eğitim grafikleri)
-- Streamlit (arayüz)
+Bu proje, karmaşık görsel verileri işleyebilen modern bir yapay zeka modeli eğitmek ve bu modeli herkesin kullanabileceği pratik bir web arayüzüne dönüştürmek amacıyla geliştirilmiştir. Geleneksel Evrişimli Sinir Ağları (CNN) yerine, görüntüleri birer kelime dizisi gibi işleyen ve global bağlamı yakalayan **Google Vision Transformer (ViT)** mimarisi üzerine inşa edilmiştir.
+
+### ✨ Temel Özellikler
+* **Geniş Tür Yelpazesi:** 220 farklı kuş türü üzerinde özelleştirilmiş eğitim süreci gerçekleştirilmiştir.
+* **Transformer Gücü:** `google/vit-base-patch16-224` modeli üzerinde Fine-Tuning (İnce Ayar) yapılmıştır.
+* **Hızlı ve İnteraktif Arayüz:** Streamlit kütüphanesi ile güçlendirilmiş, anlık tahmin yapan kullanıcı dostu panel.
+* **Derinlemesine Analiz:** Sadece tek bir tahmin değil, **Top-3 Olasılık Dağılımı** ve **Güven Skoru** sunumu.
+* **Akıllı Ön İşleme:** Görüntüleri modelin eğitim formatına uygun hale getiren otomatik `ViTImageProcessor` entegrasyonu.
 
 ---
 
-## ⚙️ Kurulum
+## 📂 Veri Seti Detayları
 
-### 1) Sanal ortam (önerilir)
+Proje kapsamında [Kaggle Bird Species Classification (220 Categories)](https://www.kaggle.com/datasets/kedarsai/bird-species-classification-220-categories) veri seti kullanılmıştır.
 
-```powershell
-python -m venv mybird
-.\mybird\Scripts\activate
-PowerShell “running scripts is disabled” hatası alırsanız:
+* **Sınıf Sayısı:** 220 Farklı Kuş Türü.
+* **Eğitim/Test Ayrımı:** Veri seti %80 Eğitim ve %20 Test (Validation) olacak şekilde rastgele bölünmüştür.
+* **Ön İşleme:** Görüntüler model gereksinimlerine göre normalize edilmiş ve 224x224 boyutuna getirilmiştir.
 
-powershell
-Kodu kopyala
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-Sonra tekrar:
+---
 
-powershell
-Kodu kopyala
-.\mybird\Scripts\activate
+## 🛠️ Kullanılan Teknolojiler
 
-2) Bağımlılıkları yükleme
-bash
-Kodu kopyala
-pip install -r requirements.txt
-requirements.txt içinde CUDA 11.8 için PyTorch index adresi tanımlıdır. (GPU kullanacaksanız uygundur.)
+| Alan | Teknoloji / Kütüphane | Açıklama |
+| :--- | :--- | :--- |
+| **Dil** | Python 3.10 | Ana programlama dili |
+| **Model** | Hugging Face Transformers | ViT model mimarisi ve ön-eğitimli ağırlıklar |
+| **Framework** | PyTorch (CUDA) | GPU tabanlı model eğitimi ve çıkarım işlemleri |
+| **Arayüz** | Streamlit | Web tabanlı interaktif kullanıcı arayüzü |
+| **Veri Analizi** | Scikit-learn & Matplotlib | Başarı metrikleri ve eğitim grafiklerinin oluşturulması |
 
-📦 Veri Seti Hazırlığı
-Kaggle linkinden veri setini indir:
+---
 
-https://www.kaggle.com/datasets/kedarsai/bird-species-classification-220-categories?resource=download
+## 📊 Model Performansı ve Eğitim Süreci
 
-Dosyaları proje içindeki archive/ klasörüne çıkartın.
+Model eğitimi, CUDA destekli bir GPU üzerinde 10 epoch boyunca sürdürülmüştür. Eğitim sırasında `learning_rate=2e-5` ve `weight_decay=0.01` optimizasyon parametreleri uygulanmıştır.
 
+### Sonuçlar:
+* **Doğruluk (Validation Accuracy):** Eğitim sonucunda yaklaşık **%85** doğruluk oranına ulaşılmıştır.
+* **Kayıp (Loss):** Eğitim kaybı (Training Loss) istikrarlı bir şekilde azalırken, doğruluk grafiği modelin başarıyla genelleme yaptığını göstermektedir.
 
-📈 Eğitim Sonuçları
-Eğitim sırasında loss düşüşü ve validation accuracy değişimi egitim_sonuclari.png dosyasına kaydedilir.
+![Eğitim Grafikleri](egitim_sonuclari.png)
 
-Validation accuracy grafiğinde doğruluk hızlı yükselip ~0.85 civarında dengelenmektedir.
+---
 
-Training loss düşerken validation loss daha yavaş düşerek belli bir seviyede stabil kalmaktadır (normal bir genelleme davranışı).
+## 🚀 Kurulum ve Çalıştırma
 
+Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
 
-## 📌 Kaynak
-
-* Kaggle veri seti: [https://www.kaggle.com/datasets/kedarsai/bird-species-classification-220-categories?resource=download](https://www.kaggle.com/datasets/kedarsai/bird-species-classification-220-categories?resource=download)
-* ViT: [https://huggingface.co/google/vit-base-patch16-224](https://huggingface.co/google/vit-base-patch16-224)
-
-KAYIT DEMO VİDEOSU : https://drive.google.com/file/d/1L-KYh08mN-cVR2RWgAfrJaOK41goTuE-/view?usp=sharing
-
+### 1. Depoyu Klonlayın
+```bash
+git clone [https://github.com/kullaniciadin/AviDetect-AI.git](https://github.com/kullaniciadin/AviDetect-AI.git)
+cd AviDetect-AI
