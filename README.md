@@ -66,11 +66,3 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 ```bash
 git clone [https://github.com/yigitkalkan/SektorKampusteProje.git](https://github.com/kullaniciadin/SektorKampusteProje.git)  
 cd BirdDetect-AI 
-
-
-
-
-
-
-
-
