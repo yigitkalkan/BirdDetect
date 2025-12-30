@@ -46,6 +46,8 @@ Proje kapsamında [Kaggle Bird Species Classification (220 Categories)](https://
 
 ## 📊 Model Performansı ve Eğitim Süreci
 
+[EĞİTİLMİŞ MODEL BAĞLANTISI](https://drive.google.com/file/d/1EYG2B_fZh8yPFqwTWlu7HXdwGAO1tt13/view?usp=sharing)
+
 Model eğitimi, CUDA destekli bir GPU üzerinde 10 epoch boyunca sürdürülmüştür. Eğitim sırasında `learning_rate=2e-5` ve `weight_decay=0.01` optimizasyon parametreleri uygulanmıştır.
 
 ### Sonuçlar:
@@ -66,6 +68,7 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 ```bash
 git clone https://github.com/yigitkalkan/BirdDetect.git
 cd BirdDetect-AI 
+
 
 
 
