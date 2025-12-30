@@ -68,6 +68,38 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 ```bash
 git clone https://github.com/yigitkalkan/BirdDetect.git
 cd BirdDetect-AI 
+```
+
+## 📖 Gerekli Kütüphaneleri Yükleyin
+```bash
+pip install -r requirements.txt
+```
+
+## Uygulamayı Başlatın
+```bash
+streamlit run mainbird.py
+```
+Terminalde aşağıdaki gibi bir çıktı alırsınız:
+
+Local URL: http://localhost:8501
+
+## 💻 Kullanım Rehberi
+
+1. **🖼️ Görüntü Yükleme**  
+   Web arayüzünden bir kuş fotoğrafı yükleyin.
+
+2. **⚙️ Otomatik İşleme**  
+   Yüklenen görüntü sistem tarafından otomatik olarak işlenir.
+
+3. **📊 Model Çıktıları**  
+   Model aşağıdaki bilgileri kullanıcıya sunar:
+   - Tahmin edilen kuş türü
+   - Güven oranı (%)
+   - En olası ilk 3 tahmin
+
+
+
+
 
 
 
