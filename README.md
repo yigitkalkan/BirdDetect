@@ -75,7 +75,7 @@ cd BirdDetect-AI
 pip install -r requirements.txt
 ```
 
-## Uygulamayı Başlatın
+## 🚀 Uygulamayı Başlatın
 ```bash
 streamlit run mainbird.py
 ```
@@ -96,6 +96,7 @@ Local URL: http://localhost:8501
    - Tahmin edilen kuş türü
    - Güven oranı (%)
    - En olası ilk 3 tahmin
+
 
 
 
