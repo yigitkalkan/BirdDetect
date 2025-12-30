@@ -85,3 +85,6 @@ Training loss düşerken validation loss daha yavaş düşerek belli bir seviyed
 
 * Kaggle veri seti: [https://www.kaggle.com/datasets/kedarsai/bird-species-classification-220-categories?resource=download](https://www.kaggle.com/datasets/kedarsai/bird-species-classification-220-categories?resource=download)
 * ViT: [https://huggingface.co/google/vit-base-patch16-224](https://huggingface.co/google/vit-base-patch16-224)
+
+KAYIT DEMO VİDEOSU : https://drive.google.com/file/d/1L-KYh08mN-cVR2RWgAfrJaOK41goTuE-/view?usp=sharing
+
