@@ -1,11 +1,11 @@
-# 🐦 AviDetect AI - Yapay Zeka Destekli Kuş Türü Tanıma
+# 🐦 BirdDetect AI - Yapay Zeka Destekli Kuş Türü Tanıma
 
 ![Project Status](https://img.shields.io/badge/Status-Completed-success)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Framework](https://img.shields.io/badge/Framework-PyTorch%20%26%20HuggingFace-orange)
 ![Interface](https://img.shields.io/badge/Interface-Streamlit-red)
 
-**AviDetect AI**, son teknoloji **Vision Transformer (ViT)** mimarisini kullanarak doğadaki kuş türlerini fotoğraflarından yüksek doğrulukla tespit eden derin öğrenme tabanlı bir görüntü sınıflandırma projesidir.
+**BirdDetect AI**, son teknoloji **Vision Transformer (ViT)** mimarisini kullanarak doğadaki kuş türlerini fotoğraflarından yüksek doğrulukla tespit eden derin öğrenme tabanlı bir görüntü sınıflandırma projesidir.
 
 ---
 
@@ -63,4 +63,5 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 ### 1. Depoyu Klonlayın
 ```bash
 git clone [https://github.com/yigitkalkan/SektorKampusteProje.git](https://github.com/kullaniciadin/SektorKampusteProje.git)  
-cd AviDetect-AI
+cd BirdDetect-AI
+
